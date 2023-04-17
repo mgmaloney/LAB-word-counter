@@ -12,6 +12,18 @@ const wordCounter = (value) => {
   }
 };
 
+const toggleMode = () => {
+  if (document.querySelector("body").style.backgroundColor === "aliceblue") {
+    document.querySelector("body").style.backgroundColor = "black";
+    document.querySelector("body").style.color = "white";
+    textArea.style.backgroundColor = "darkgrey";
+  } else {
+    document.querySelector("body").style.backgroundColor = "aliceblue";
+    document.querySelector("body").style.color = "black";
+    textArea.style.backgroundColor = "white";
+  }
+};
+
 const textArea = document.querySelector("textArea");
 const form = document.querySelector("form");
 const error = document.querySelector("#error");
@@ -26,11 +38,11 @@ form.addEventListener("submit", (event) => {
   wordCounter(value);
 });
 
-toggleButton.addEventListener("reset", () => {
-  error.innerHTML = "";
+form.addEventListener("reset", () => {
   wordCount.innerHTML = "";
+  error.innerHTML = "";
 });
 
-toggleButton.addEventListener("click", (event) => {
-  toggleMode(event.target.innerHTML);
+toggleButton.addEventListener("click", () => {
+  toggleMode();
 });
