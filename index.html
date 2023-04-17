@@ -8,20 +8,23 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <h1>Word Counter</h1>
-    <button id="bg-switch">Dark Mode</button>
-    <div id="error" class="error"></div>
-    `
-    <form>
-      <textarea
-        placeholder="Place your words here..."
-        cols="100"
-        rows="30"
-      ></textarea>
-      <button type="submit">Submit</button>
-      <button type="reset">Clear</button>
-    </form>
-    <div id="wordcount"></div>
+    <div class="container">
+      <h1>Word Counter</h1>
+      <div class="darkmode"><button id="bg-switch">Dark Mode</button></div>
+      <div id="error" class="error"></div>
+      <form>
+        <textarea
+          placeholder="Place your words here..."
+          cols="100"
+          rows="30"
+        ></textarea>
+        <div class="buttons">
+          <button type="submit">Submit</button>
+          <button type="reset">Clear</button>
+        </div>
+      </form>
+      <div id="wordcount"></div>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
